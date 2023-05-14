@@ -1,0 +1,9 @@
+syntax = "proto3";
+package usersvc;
+
+option go_package = "github.com/morris-zheng/go-slim-micro-usersvc/export/usersvc";
+
+message OpResp {
+  string msg = 1;
+  int32 code = 2;
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+package user;
+
+option go_package = "github.com/morris-zheng/go-slim-micro-usersvc/export/user";
+
+import "proto/usersvc.proto";
+
+message User {
+  int64 id = 1;
+  string createTime = 2;
+  string updateTime = 3;
+  string name = 4;
+}
+
+message UserById {
+  int64 id = 1;
+}
+
+service Service {
+  rpc Create(User) returns (usersvc.OpResp) {};
+  rpc Get(UserById) returns (User) {};
+}

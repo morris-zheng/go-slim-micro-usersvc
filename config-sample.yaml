@@ -1,0 +1,21 @@
+debug: true
+env: local
+name: usersvc
+host: 127.0.0.1
+port: 5002
+
+logger:
+  level: "DEBUG"
+
+mysql:
+  host: "localhost"
+  port: 3306
+  user: "root"
+  password: "123456"
+  database: "test"
+
+etcd:
+  endpoints:
+    - "127.0.0.1:12379"
+  prefix: "grpc"
+  keep_alive_interval: 60
